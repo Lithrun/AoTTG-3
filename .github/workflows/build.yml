@@ -28,7 +28,7 @@ jobs:
       - name: Build project
         uses: webbertakken/unity-builder@v0.10
         with:
-          unityVersion: 2017.4.30f1
+          unityVersion: 2017.3.0f1
           targetPlatform: StandaloneWindows64
 
       # Output
