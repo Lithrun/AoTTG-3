@@ -19,7 +19,7 @@ jobs:
         uses: microsoft/setup-nuget@v1.0.2
         
       - name: Setup MSBuild
-        uses: msbuild AoTTG-2.sln
+        uses: msbuild ${{ github.workspace }}/AoTTG-2.sln
 
   sonarCloudTrigger:
     needs: build
