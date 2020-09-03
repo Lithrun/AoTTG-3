@@ -8,15 +8,21 @@ name: Main Workflow
 jobs:
   build:
     name: Compile and Test
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
-      - name: Clone Repository
-        uses: actions/checkout@master
-      - name: Setup go
-        uses: actions/setup-go@v1
-        with:
-          go-version: '1.13'
-      - run: make test
+      - uses: actions/checkout@v2
+        
+      - name: Setup MSBuild
+        uses: microsoft/setup-msbuild@v1
+        
+      - name: Setup NuGet
+        uses: microsoft/setup-nuget@v1.0.2
+        
+      - name: Restore NuGet packages
+        uses: nuget restore AoTTG-2.sln
+        
+      - name: Setup MSBuild
+        uses: msbuild AoTTG-2.sln
 
   sonarCloudTrigger:
     needs: build
