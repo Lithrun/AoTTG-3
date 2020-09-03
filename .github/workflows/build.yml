@@ -28,7 +28,7 @@ jobs:
       - name: Build project
         uses: webbertakken/unity-builder@v0.10
         with:
-          unityVersion: 2019.2.11f1
+          unityVersion: 2017.4.30f1
           targetPlatform: StandaloneWindows64
 
       # Output
@@ -36,3 +36,20 @@ jobs:
         with:
           name: Build
           path: build
+          
+  sonarCloudTrigger:
+    needs: build
+    name: SonarCloud Trigger
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@master
+      - name: Analyze with SonarCloud
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.organization=aottg-2
+            -Dsonar.projectKey=AoTTG-2_AoTTG-2
