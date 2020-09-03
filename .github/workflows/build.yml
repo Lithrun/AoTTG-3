@@ -18,6 +18,9 @@ jobs:
         with:
           lfs: true
 
+      - name: Unity - Request Activation File
+        uses: webbertakken/unity-request-activation-file@v1.1
+
       # Cache
       - uses: actions/cache@v1.1.0
         with:
