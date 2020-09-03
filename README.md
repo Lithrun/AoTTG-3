@@ -16,3 +16,5 @@ Yes. The game is available to everyone, free of charge! It's a project by the co
 ## When will the game release?
 
 AoTTG 2 will be ready for release once every issue within the [Release milestone](https://github.com/AoTTG-2/AoTTG-2/milestone/2) is completed. Please do not pay too much attention to the % number, is that is only calculated based on the amount of issues that are completed. Some issues can take weeks, others can take minutes.
+
+Update
