@@ -1,39 +1,21 @@
-name: Actions 😎
 
-on:
-  pull_request: {}
-  push: { branches: [development] }
-
-env:
-  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-
+name: Test project
+on: [push]
 jobs:
-  build:
-    name: Build my project ✨
+  requestActivationFile:
     runs-on: ubuntu-latest
     steps:
-      # Checkout
       - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          lfs: true
 
-      # Cache
-      - uses: actions/cache@v1.1.0
+      - name: Request manual activation file
+        uses: MirrorNG/unity-runner@2.0.0
+        id: getManualLicenseFile
         with:
-          path: Library
-          key: Library
-          
-      # Build
-      - name: Build project
-        uses: webbertakken/unity-builder@v0.10
-        with:
-          unityVersion: 2017.4.27f1
-          targetPlatform: StandaloneWindows64
+            entrypoint: /request_activation.sh
 
-      # Output
-      - uses: actions/upload-artifact@v1
+      - name: Expose as artifact
+        uses: actions/upload-artifact@v1
         with:
-          name: Build
-          path: build
- 
+            name: Manual Activation File
+            path: ${{ steps.getManualLicenseFile.outputs.filePath }}
