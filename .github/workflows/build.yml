@@ -23,6 +23,15 @@ jobs:
         with:
           path: Library
           key: Library
+          
+      - name: Unity - Request Activation File
+        uses: webbertakken/unity-request-activation-file@v1.1
+
+      - name: Unity - Activate
+        uses: webbertakken/unity-activate@v1.2
+
+      - name: Unity - Return License
+        uses: webbertakken/unity-return-license@v1
 
       # Build
       - name: Build project
