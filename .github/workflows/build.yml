@@ -1,42 +1,38 @@
+name: Actions 😎
+
 on:
-  push:
-    branches:
-      - development
-  pull_request:
-    types: [opened, synchronize, reopened]
-name: Main Workflow
+  pull_request: {}
+  push: { branches: [development] }
+
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+
 jobs:
   build:
-    name: Compile and Test
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v2
-        
-      - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v1
-        
-      - name: Setup NuGet
-        uses: NuGet/setup-nuget@v1.0.2
-        
-      - name: Restore NuGet packages
-        run: nuget restore AoTTG-2.sln
-        
-      - name: Setup MSBuild
-        run: msbuild AoTTG-2.sln
-
-  sonarCloudTrigger:
-    needs: build
-    name: SonarCloud Trigger
+    name: Build my project ✨
     runs-on: ubuntu-latest
     steps:
-      - name: Clone Repository
-        uses: actions/checkout@master
-      - name: Analyze with SonarCloud
-        uses: sonarsource/sonarcloud-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      # Checkout
+      - name: Checkout repository
+        uses: actions/checkout@v2
         with:
-          args: >
-            -Dsonar.organization=aottg-2
-            -Dsonar.projectKey=AoTTG-2_AoTTG-2
+          lfs: true
+
+      # Cache
+      - uses: actions/cache@v1.1.0
+        with:
+          path: Library
+          key: Library
+
+      # Build
+      - name: Build project
+        uses: webbertakken/unity-builder@v0.10
+        with:
+          unityVersion: 2017.4.27f1
+          targetPlatform: StandaloneWindows64
+
+      # Output
+      - uses: actions/upload-artifact@v1
+        with:
+          name: Build
+          path: build
