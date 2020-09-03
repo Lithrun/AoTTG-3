@@ -1,41 +1,19 @@
-name: Actions 😎
-
-on:
-  pull_request: {}
-  push: { branches: [development] }
-
-env:
-  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-
+name: Acquire activation file
+on: [push]
 jobs:
-  build:
-    name: Build my project ✨
+  activation:
+    name: Request manual activation file 🔑
     runs-on: ubuntu-latest
     steps:
-      # Checkout
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          lfs: true
-
-      - name: Unity - Request Activation File
-        uses: webbertakken/unity-request-activation-file@v1.1
-
-      # Cache
-      - uses: actions/cache@v1.1.0
-        with:
-          path: Library
-          key: Library
-
-      # Build
-      - name: Build project
-        uses: webbertakken/unity-builder@v0.10
-        with:
-          unityVersion: 2017.4.27f1
-          targetPlatform: WebGL
-
-      # Output
-      - uses: actions/upload-artifact@v1
-        with:
-          name: Build
-          path: build
+        # Request manual activation file
+        - name: Request manual activation file
+          id: getManualLicenseFile
+          uses: webbertakken/unity-request-manual-activation-file@v1.1
+          with:
+            unityVersion: 2017.4.27f1    
+        # Upload artifact (Unity_v20XX.X.XXXX.alf)
+        - name: Expose as artifact
+          uses: actions/upload-artifact@v1
+          with:
+            name: ${{ steps.getManualLicenseFile.outputs.filePath }}
+            path: ${{ steps.getManualLicenseFile.outputs.filePath }}:
