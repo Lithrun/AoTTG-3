@@ -29,7 +29,7 @@ jobs:
         uses: webbertakken/unity-builder@v0.10
         with:
           unityVersion: 2017.4.27f1
-          targetPlatform: Windows
+          targetPlatform: StandaloneWindows64
 
       # Output
       - uses: actions/upload-artifact@v1
