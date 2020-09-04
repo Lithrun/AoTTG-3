@@ -23,38 +23,38 @@ on:
   pull_request: {}
   push: { branches: [development] }
   
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+
 jobs:   
   CI:
     name: Test
     runs-on: ubuntu-latest
-    env:
-      UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
     steps:
-  
-      # Checkout repository (required to test local actions)
+      # Checkout
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          fetch-depth: 0
-        
-      - name: Activate license
-        uses: MirrorNG/unity-runner@3.0.0
+          lfs: true
+
+      # Cache
+      - uses: actions/cache@v1.1.0
         with:
-          entrypoint: /activate.sh
-          
-      - name: Generate Solution
-        uses: MirrorNG/unity-runner@3.0.0
+          path: Library
+          key: Library
+
+      # Test
+      - name: Run tests
+        uses: webbertakken/unity-test-runner@v1.3
         with:
-          # Arguments to pass to unity
-          args: -buildTarget StandaloneWindows64 -customBuildName AoTTG2 -customBuildPath ./build/StandaloneWindows64 -projectPath . -executeMethod  UnityEditor.SyncVS.SyncSolution -quit
-      
-      # Upload artifacts
-      - name: Archive test results
-        uses: actions/upload-artifact@v1
-        if: always()
+          unityVersion: 2020.1.4f1
+
+      # Build
+      - name: Build project
+        uses: webbertakken/unity-builder@v0.10
         with:
-          name: Test results
-          path: Tests
+          unityVersion: 2020.1.4f1
+          targetPlatform: StandaloneWindows64
   
       - name: SonarQube analysis
         if: always()
