@@ -37,10 +37,10 @@ jobs:
         with:
           fetch-depth: 0
         
-      - name: Activate license
-        uses: MirrorNG/unity-runner@3.0.0
-        with:
-          entrypoint: /activate.sh
+      #- name: Activate license
+      #  uses: MirrorNG/unity-runner@3.0.0
+      #  with:
+      #    entrypoint: /activate.sh
           
       - name: Generate Solution
         uses: MirrorNG/unity-runner@3.0.0
