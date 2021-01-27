@@ -27,6 +27,7 @@
       },
       {
         "files": [
+          "Site/index.md",
           "api/*.md",
           "articles/**.md",
           "toc.yml",
