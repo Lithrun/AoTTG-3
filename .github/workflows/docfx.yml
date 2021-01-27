@@ -12,7 +12,7 @@ jobs:
     - uses: nikeee/docfx-action@v1.0.0
       name: Build Documentation
       with:
-        args: path/to/your/docfx.json
+        args: docfx.json
 
     # Publish generated site using GitHub Pages
     - uses: maxheld83/ghpages@master
