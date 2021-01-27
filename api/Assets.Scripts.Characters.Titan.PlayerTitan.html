@@ -1,0 +1,620 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class PlayerTitan
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class PlayerTitan
+   ">
+    <meta name="generator" content="docfx 2.56.6.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan">
+  
+  
+  <h1 id="Assets_Scripts_Characters_Titan_PlayerTitan" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan" class="text-break">Class PlayerTitan
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Photon.MonoBehaviour.html">MonoBehaviour</a></div>
+    <div class="level2"><a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html">MindlessTitan</a></div>
+    <div class="level3"><span class="xref">PlayerTitan</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_TitanState">MindlessTitan.TitanState</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_PreviousState">MindlessTitan.PreviousState</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Type">MindlessTitan.Type</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_IsAlive">MindlessTitan.IsAlive</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_TitanBody">MindlessTitan.TitanBody</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Animation">MindlessTitan.Animation</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Rigidbody">MindlessTitan.Rigidbody</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_CurrentAnimation">MindlessTitan.CurrentAnimation</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_AnimationTurnLeft">MindlessTitan.AnimationTurnLeft</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_AnimationTurnRight">MindlessTitan.AnimationTurnRight</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_AnimationWalk">MindlessTitan.AnimationWalk</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_AnimationRun">MindlessTitan.AnimationRun</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_AnimationRecovery">MindlessTitan.AnimationRecovery</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_AnimationDeath">MindlessTitan.AnimationDeath</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_AnimationIdle">MindlessTitan.AnimationIdle</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_AnimationCover">MindlessTitan.AnimationCover</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_AnimationEyes">MindlessTitan.AnimationEyes</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_AttackDistance">MindlessTitan.AttackDistance</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Speed">MindlessTitan.Speed</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_TargetDistance">MindlessTitan.TargetDistance</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Size">MindlessTitan.Size</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Stamina">MindlessTitan.Stamina</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_StaminaRecovery">MindlessTitan.StaminaRecovery</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Health">MindlessTitan.Health</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_HealthRegeneration">MindlessTitan.HealthRegeneration</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_ViewDistance">MindlessTitan.ViewDistance</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Focus">MindlessTitan.Focus</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_IsHooked">MindlessTitan.IsHooked</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_IsLooked">MindlessTitan.IsLooked</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_IsColliding">MindlessTitan.IsColliding</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Target">MindlessTitan.Target</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_RotationModifier">MindlessTitan.RotationModifier</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Attacks">MindlessTitan.Attacks</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_CurrentAttack">MindlessTitan.CurrentAttack</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_InitializeRpc_System_String_PhotonMessageInfo_">MindlessTitan.InitializeRpc(String, PhotonMessageInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_IsDisabled_Assets_Scripts_Characters_Titan_BodyPart___">MindlessTitan.IsDisabled(BodyPart[])</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_grabTF">MindlessTitan.grabTF</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Grab_System_Boolean_">MindlessTitan.Grab(Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_GrabEscapeRpc">MindlessTitan.GrabEscapeRpc()</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_UpdateHealthLabelRpc_System_Int32_System_Int32_">MindlessTitan.UpdateHealthLabelRpc(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnAnkleHit_System_Int32_System_Int32_">MindlessTitan.OnAnkleHit(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnBodyPartHitRpc_Assets_Scripts_Characters_Titan_BodyPart_System_Int32_">MindlessTitan.OnBodyPartHitRpc(BodyPart, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnEyeHitRpc_System_Int32_System_Int32_">MindlessTitan.OnEyeHitRpc(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnNapeHitRpc_System_Int32_System_Int32_">MindlessTitan.OnNapeHitRpc(Int32, Int32)</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnTargetGrabbed_GameObject_System_Boolean_">MindlessTitan.OnTargetGrabbed(GameObject, Boolean)</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Dead">MindlessTitan.Dead()</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_HasTarget">MindlessTitan.HasTarget()</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnTargetDetected_GameObject_">MindlessTitan.OnTargetDetected(GameObject)</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_ChangeState_Assets_Scripts_Characters_Titan_MindlessTitanState_">MindlessTitan.ChangeState(MindlessTitanState)</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_RefreshStamina">MindlessTitan.RefreshStamina()</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_IsStuck">MindlessTitan.IsStuck()</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_CrossFade_System_String_System_Single_PhotonMessageInfo_">MindlessTitan.CrossFade(String, Single, PhotonMessageInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_CrossFadeRpc_System_String_System_Single_PhotonMessageInfo_">MindlessTitan.CrossFadeRpc(String, Single, PhotonMessageInfo)</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnAttacking">MindlessTitan.OnAttacking()</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnChasing">MindlessTitan.OnChasing()</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnDisabled">MindlessTitan.OnDisabled()</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnGrabbing">MindlessTitan.OnGrabbing()</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnRecovering">MindlessTitan.OnRecovering()</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnTurning">MindlessTitan.OnTurning()</a>
+    </div>
+    <div>
+      <a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnWandering">MindlessTitan.OnWandering()</a>
+    </div>
+    <div>
+      <a class="xref" href="Photon.MonoBehaviour.html#Photon_MonoBehaviour_photonView">MonoBehaviour.photonView</a>
+    </div>
+    <div>
+      <a class="xref" href="Photon.MonoBehaviour.html#Photon_MonoBehaviour_observed">MonoBehaviour.observed</a>
+    </div>
+    <div>
+      <a class="xref" href="Photon.MonoBehaviour.html#Photon_MonoBehaviour_networkView">MonoBehaviour.networkView</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Assets.Scripts.Characters.Titan.html">Assets.Scripts.Characters.Titan</a></h6>
+  <h6><strong>Assembly</strong>: Assembly-CSharp.dll</h6>
+  <h5 id="Assets_Scripts_Characters_Titan_PlayerTitan_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class PlayerTitan : MindlessTitan</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Lithrun/AoTTG-3/new/development/apiSpec/new?filename=Assets_Scripts_Characters_Titan_PlayerTitan_Ai.md&amp;value=---%0Auid%3A%20Assets.Scripts.Characters.Titan.PlayerTitan.Ai%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Lithrun/AoTTG-3/blob/development/Assets/Scripts/Characters/Titan/PlayerTitan.cs/#L16">View Source</a>
+  </span>
+  <h4 id="Assets_Scripts_Characters_Titan_PlayerTitan_Ai" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.Ai">Ai</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Ai</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Lithrun/AoTTG-3/new/development/apiSpec/new?filename=Assets_Scripts_Characters_Titan_PlayerTitan_currentCamera.md&amp;value=---%0Auid%3A%20Assets.Scripts.Characters.Titan.PlayerTitan.currentCamera%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Lithrun/AoTTG-3/blob/development/Assets/Scripts/Characters/Titan/PlayerTitan.cs/#L10">View Source</a>
+  </span>
+  <h4 id="Assets_Scripts_Characters_Titan_PlayerTitan_currentCamera" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.currentCamera">currentCamera</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Camera currentCamera</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Camera</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Lithrun/AoTTG-3/new/development/apiSpec/new?filename=Assets_Scripts_Characters_Titan_PlayerTitan_currentDirection.md&amp;value=---%0Auid%3A%20Assets.Scripts.Characters.Titan.PlayerTitan.currentDirection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Lithrun/AoTTG-3/blob/development/Assets/Scripts/Characters/Titan/PlayerTitan.cs/#L11">View Source</a>
+  </span>
+  <h4 id="Assets_Scripts_Characters_Titan_PlayerTitan_currentDirection" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.currentDirection">currentDirection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float currentDirection</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Lithrun/AoTTG-3/new/development/apiSpec/new?filename=Assets_Scripts_Characters_Titan_PlayerTitan_IsCovering.md&amp;value=---%0Auid%3A%20Assets.Scripts.Characters.Titan.PlayerTitan.IsCovering%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Lithrun/AoTTG-3/blob/development/Assets/Scripts/Characters/Titan/PlayerTitan.cs/#L15">View Source</a>
+  </span>
+  <h4 id="Assets_Scripts_Characters_Titan_PlayerTitan_IsCovering" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.IsCovering">IsCovering</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool IsCovering</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Lithrun/AoTTG-3/new/development/apiSpec/new?filename=Assets_Scripts_Characters_Titan_PlayerTitan_sit.md&amp;value=---%0Auid%3A%20Assets.Scripts.Characters.Titan.PlayerTitan.sit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Lithrun/AoTTG-3/blob/development/Assets/Scripts/Characters/Titan/PlayerTitan.cs/#L12">View Source</a>
+  </span>
+  <h4 id="Assets_Scripts_Characters_Titan_PlayerTitan_sit" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.sit">sit</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool sit</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Lithrun/AoTTG-3/new/development/apiSpec/new?filename=Assets_Scripts_Characters_Titan_PlayerTitan_targetDirection.md&amp;value=---%0Auid%3A%20Assets.Scripts.Characters.Titan.PlayerTitan.targetDirection%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Lithrun/AoTTG-3/blob/development/Assets/Scripts/Characters/Titan/PlayerTitan.cs/#L13">View Source</a>
+  </span>
+  <h4 id="Assets_Scripts_Characters_Titan_PlayerTitan_targetDirection" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.targetDirection">targetDirection</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float targetDirection</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Lithrun/AoTTG-3/new/development/apiSpec/new?filename=Assets_Scripts_Characters_Titan_PlayerTitan_Awake.md&amp;value=---%0Auid%3A%20Assets.Scripts.Characters.Titan.PlayerTitan.Awake%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Lithrun/AoTTG-3/blob/development/Assets/Scripts/Characters/Titan/PlayerTitan.cs/#L20">View Source</a>
+  </span>
+  <a id="Assets_Scripts_Characters_Titan_PlayerTitan_Awake_" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.Awake*"></a>
+  <h4 id="Assets_Scripts_Characters_Titan_PlayerTitan_Awake" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.Awake">Awake()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Awake()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Awake">MindlessTitan.Awake()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Lithrun/AoTTG-3/new/development/apiSpec/new?filename=Assets_Scripts_Characters_Titan_PlayerTitan_Die.md&amp;value=---%0Auid%3A%20Assets.Scripts.Characters.Titan.PlayerTitan.Die%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Lithrun/AoTTG-3/blob/development/Assets/Scripts/Characters/Titan/PlayerTitan.cs/#L167">View Source</a>
+  </span>
+  <a id="Assets_Scripts_Characters_Titan_PlayerTitan_Die_" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.Die*"></a>
+  <h4 id="Assets_Scripts_Characters_Titan_PlayerTitan_Die" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.Die">Die()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Die()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Lithrun/AoTTG-3/new/development/apiSpec/new?filename=Assets_Scripts_Characters_Titan_PlayerTitan_FixedUpdate.md&amp;value=---%0Auid%3A%20Assets.Scripts.Characters.Titan.PlayerTitan.FixedUpdate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Lithrun/AoTTG-3/blob/development/Assets/Scripts/Characters/Titan/PlayerTitan.cs/#L30">View Source</a>
+  </span>
+  <a id="Assets_Scripts_Characters_Titan_PlayerTitan_FixedUpdate_" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.FixedUpdate*"></a>
+  <h4 id="Assets_Scripts_Characters_Titan_PlayerTitan_FixedUpdate" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.FixedUpdate">FixedUpdate()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void FixedUpdate()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_FixedUpdate">MindlessTitan.FixedUpdate()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Lithrun/AoTTG-3/new/development/apiSpec/new?filename=Assets_Scripts_Characters_Titan_PlayerTitan_Initialize_Assets_Scripts_Characters_Titan_TitanConfiguration_.md&amp;value=---%0Auid%3A%20Assets.Scripts.Characters.Titan.PlayerTitan.Initialize(Assets.Scripts.Characters.Titan.TitanConfiguration)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Lithrun/AoTTG-3/blob/development/Assets/Scripts/Characters/Titan/PlayerTitan.cs/#L50">View Source</a>
+  </span>
+  <a id="Assets_Scripts_Characters_Titan_PlayerTitan_Initialize_" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.Initialize*"></a>
+  <h4 id="Assets_Scripts_Characters_Titan_PlayerTitan_Initialize_Assets_Scripts_Characters_Titan_TitanConfiguration_" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.Initialize(Assets.Scripts.Characters.Titan.TitanConfiguration)">Initialize(TitanConfiguration)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void Initialize(TitanConfiguration configuration)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Assets.Scripts.Characters.Titan.TitanConfiguration.html">TitanConfiguration</a></td>
+        <td><span class="parametername">configuration</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Initialize_Assets_Scripts_Characters_Titan_TitanConfiguration_">MindlessTitan.Initialize(TitanConfiguration)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Lithrun/AoTTG-3/new/development/apiSpec/new?filename=Assets_Scripts_Characters_Titan_PlayerTitan_OnTitanDeath.md&amp;value=---%0Auid%3A%20Assets.Scripts.Characters.Titan.PlayerTitan.OnTitanDeath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Lithrun/AoTTG-3/blob/development/Assets/Scripts/Characters/Titan/PlayerTitan.cs/#L152">View Source</a>
+  </span>
+  <a id="Assets_Scripts_Characters_Titan_PlayerTitan_OnTitanDeath_" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.OnTitanDeath*"></a>
+  <h4 id="Assets_Scripts_Characters_Titan_PlayerTitan_OnTitanDeath" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.OnTitanDeath">OnTitanDeath()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnTitanDeath()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_OnTitanDeath">MindlessTitan.OnTitanDeath()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Lithrun/AoTTG-3/new/development/apiSpec/new?filename=Assets_Scripts_Characters_Titan_PlayerTitan_Update.md&amp;value=---%0Auid%3A%20Assets.Scripts.Characters.Titan.PlayerTitan.Update%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Lithrun/AoTTG-3/blob/development/Assets/Scripts/Characters/Titan/PlayerTitan.cs/#L188">View Source</a>
+  </span>
+  <a id="Assets_Scripts_Characters_Titan_PlayerTitan_Update_" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.Update*"></a>
+  <h4 id="Assets_Scripts_Characters_Titan_PlayerTitan_Update" data-uid="Assets.Scripts.Characters.Titan.PlayerTitan.Update">Update()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void Update()</code></pre>
+  </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Assets.Scripts.Characters.Titan.MindlessTitan.html#Assets_Scripts_Characters_Titan_MindlessTitan_Update">MindlessTitan.Update()</a></div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Lithrun/AoTTG-3/new/development/apiSpec/new?filename=Assets_Scripts_Characters_Titan_PlayerTitan.md&amp;value=---%0Auid%3A%20Assets.Scripts.Characters.Titan.PlayerTitan%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Lithrun/AoTTG-3/blob/development/Assets/Scripts/Characters/Titan/PlayerTitan.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
